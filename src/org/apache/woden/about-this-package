@@ -1,0 +1,5 @@
+Interfaces for the main functional components of the Woden API,
+such as factories, readers, writers, extension registry.
+Initially these may be WSDL 2.0 specific in places, but eventually
+this package should probably be WSDL-version independent - 
+i.e. the framework API that hides version specific interfaces.

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="wsdl2c" default="jar" basedir=".">
+  <property name="src.dir" value="./src"/>
+  <property name="build.dir" value="./build"/>
+  <property name="build.classes" value="${build.dir}/classes"/>
+  <target name="compile">
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${build.classes}"/>
+    <javac srcdir="${src.dir}" destdir="${build.classes}">
+      <include name="**/*.java"/>
+    </javac>
+    <copy todir="${build.classes}">
+      <fileset dir="${src.dir}" includes="**/*.properties,**/*.xsl"/>
+    </copy>
+  </target>
+  <target name="jar" depends="compile">
+    <jar jarfile="${build.dir}/wsdl2c.jar">
+      <fileset dir="${build.classes}">
+        <include name="org/apache/**"/>
+        <include name="javax/**"/>
+      </fileset>
+    </jar>
+  </target>
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+  </target>
+</project>
+
