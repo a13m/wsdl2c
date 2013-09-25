@@ -20,11 +20,11 @@
 
 package org.apache.axis2.util.threadpool;
 
-import edu.emory.mathcs.backport.java.util.concurrent.Executor;
-import edu.emory.mathcs.backport.java.util.concurrent.LinkedBlockingQueue;
-import edu.emory.mathcs.backport.java.util.concurrent.SynchronousQueue;
-import edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor;
-import edu.emory.mathcs.backport.java.util.concurrent.TimeUnit;
+import java.util.concurrent.Executor;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import org.apache.axis2.AxisFault;
 import org.apache.axis2.i18n.Messages;
 import org.apache.axis2.java.security.AccessController;
@@ -117,7 +117,7 @@ public class ThreadPool implements ThreadFactory {
         return rc;
     }
 
-    private static class DefaultThreadFactory implements edu.emory.mathcs.backport.java.util.concurrent.ThreadFactory {
+    private static class DefaultThreadFactory implements java.util.concurrent.ThreadFactory {
         private final String name;
         private final boolean daemon;
         private final int priority;
