@@ -20,7 +20,7 @@
 
 package org.apache.axis2.transport.http;
 
-import edu.emory.mathcs.backport.java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CountDownLatch;
 import org.apache.axiom.om.OMElement;
 import org.apache.axiom.om.impl.builder.StAXBuilder;
 import org.apache.axiom.soap.SOAP12Constants;

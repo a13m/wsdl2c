@@ -20,7 +20,7 @@
 
 package org.apache.axis2.deployment;
 
-import edu.emory.mathcs.backport.java.util.Collections;
+import java.util.Collections;
 import org.apache.axiom.attachments.lifecycle.LifecycleManager;
 import org.apache.axiom.om.OMAttribute;
 import org.apache.axiom.om.OMElement;

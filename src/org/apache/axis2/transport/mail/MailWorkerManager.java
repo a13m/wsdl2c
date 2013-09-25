@@ -19,8 +19,8 @@
 
 package org.apache.axis2.transport.mail;
 
-import edu.emory.mathcs.backport.java.util.concurrent.ExecutorService;
-import edu.emory.mathcs.backport.java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
 import org.apache.axis2.AxisFault;
 import org.apache.axis2.context.ConfigurationContext;
 /*
